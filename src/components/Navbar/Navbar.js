@@ -30,7 +30,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        FOOD
       </Typography>
       <Divider />
       <List>
@@ -44,14 +44,6 @@ function DrawerAppBar(props) {
       </List>
     </Box>
   );
-
-  const NavColor = () => {
-    const nav = document.getElementById('navbar');
-    if(nav.scrollHeight > 64)
-    {
-      nav.classList.add('scrolled')
-    }
-  };
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
