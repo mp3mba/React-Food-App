@@ -1,4 +1,4 @@
-# charity
+# React Food Web
 
 <div align="center">
 
