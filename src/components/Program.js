@@ -5,19 +5,19 @@ import EggIcon from '@mui/icons-material/Egg';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
-
+import Container from '@mui/material/Container';
 
 function Program() {
     return (
-        <Box>
-            <Box marginBottom='20px'>
+        <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: "center"}}>
+            <Box marginBottom='20px' sx={{display: 'flex', justifyContent: 'center'}}>
                 <Typography variant="h4" gutterBottom style={{textTransform: 'capitalize', fontWeight: 700}}>
                     our best programs
                 </Typography>
             </Box>
             
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2} sx={{borderRadius: '15px', padding: '30px 0px', backgroundColor: '#15038a'}}>
+            <Box>
+                <Grid container alignItems='center' justifyContent="center" spacing={2} sx={{borderRadius: '15px', padding: '30px 0px', backgroundColor: '#15038a'}}>
                     <Grid item xs={12} md={3}>
                         <Box sx={{display: 'flex', justifyContent: 'center', flexDirection: 'column', color:'white'}}>
                             <EggIcon style={{textAlign: 'center', width: '100%', fontSize: '40px'}}/>
@@ -64,7 +64,7 @@ function Program() {
                     </Grid>
                 </Grid>
             </Box>
-        </Box>
+        </Container>
         
     )
 }

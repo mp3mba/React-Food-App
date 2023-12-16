@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import HeroAd from '../media/em.png';
 
 function Ad (){
     return(
@@ -9,7 +10,7 @@ function Ad (){
                 style={{width:'200px', height: '100px'}}
             >
                 <img 
-                    src='em.png' 
+                    src={HeroAd} 
                     alt='emerson' 
                     style={{objectFit:'cover', height: '100%', width:'100%'}}
                 ></img>
@@ -18,7 +19,7 @@ function Ad (){
                 style={{width:'200px', height: '100px'}}
             >
                 <img 
-                    src='em.png' 
+                    src={HeroAd} 
                     alt='emerson' 
                     style={{objectFit:'cover', height: '100%', width:'100%'}}
                 ></img>
@@ -27,7 +28,7 @@ function Ad (){
                 style={{width:'200px', height: '100px'}}
             >
                 <img 
-                    src='em.png' 
+                    src={HeroAd} 
                     alt='emerson' 
                     style={{objectFit:'cover', height: '100%', width:'100%'}}
                 ></img>

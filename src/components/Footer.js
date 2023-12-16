@@ -1,79 +1,134 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import { styled } from '@mui/system';
+import Container from '@mui/material/Container';
 
 function Footer(){
+    const CustomContainer = styled(Container)(({ theme }) => ({
+        display: "flex",
+        justifyContent: "space-around",
+        gap: theme.spacing(5),
+        [theme.breakpoints.down("sm")]: {
+          flexDirection: "column",
+          textAlign: "center",
+        },
+    }));
+
+    const FooterLink = styled("span")(({ theme }) => ({
+        fontSize: "16px",
+        color: "#7A7A7E",
+        fontWeight: "300",
+        display: 'block',
+        cursor: "pointer",
+        "&:hover": {
+        color: "#fff",
+        },
+    }));
+
     return(
-        <Box style={{marginTop:'60px', paddingBottom:'30px'}}>
-            <Grid container spacing={2}>
-                <Grid xs={12} md={6}>
-                    <Box style={{width:'60%'}}>
-                        <Typography variant='h4' style={{fontWeight:900, color:'#15038a'}}>
-                            Eatly
+        <Box sx={{ py: 10, backgroundColor: '#15038a', mt: '20px' }}>
+            <CustomContainer>
+                <CustomContainer>
+                    <Box sx={{
+                        color: '#fff'
+                    }}>
+                        <Typography
+                            sx={{
+                                fontSize: "20px",
+                                fontWeight: "700",
+                                mb: 2,
+                            }}
+                        >
+                            Food
                         </Typography>
                         <Typography variant='subtitle1' style={{fontSize:'18px'}}>
                             We have a mission to make people around the world better through a healthier diet.
                         </Typography>
                     </Box>
-                </Grid>
-                <Grid xs={12} md={6} style={{marginLeft: '17px', marginTop: '10px'}}>
-                    <Grid container spacing={2}>
-                        <Grid xs={12} md={3}>
-                            <Typography variant='h5' style={{color:'#15038a', fontWeight:900}}>
-                                About
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                About Us
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                Features
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                News & blog
-                            </Typography>
-                        </Grid>
-                        <Grid xs={12} md={3}>
-                            <Typography variant='h5' style={{color:'#15038a', fontWeight:900}}>
-                                Movement
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                What Eatly
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
+                    <Box>
+                        <Typography
+                            sx={{
+                                fontSize: "20px",
+                                color: "#fff",
+                                fontWeight: "700",
+                                mb: 2,
+                            }}
+                        >
+                            About
+                        </Typography>
+                        <FooterLink>
+                            About Us
+                        </FooterLink>
+                        <FooterLink>
+                            Features
+                        </FooterLink>
+                        <FooterLink>
+                            News & blog
+                        </FooterLink>
+                    </Box>
+                    <Box>
+                        <Typography
+                            sx={{
+                                fontSize: "20px",
+                                color: "#fff",
+                                fontWeight: "700",
+                                mb: 2,
+                            }}
+                        >
+                            Movement
+                        </Typography>
+                            <FooterLink>
+                                What Food
+                            </FooterLink>
+                            <FooterLink>
                                 Support Us
-                            </Typography>
-                        </Grid>
-                        <Grid xs={12} md={3}>
-                            <Typography variant='h5' style={{color:'#15038a', fontWeight:900}}>
-                                Company
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                Why Eatly
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                Capital
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                Security
-                            </Typography>
-                        </Grid>
-                        <Grid xs={12} md={3}>
-                            <Typography variant='h5' style={{color:'#15038a', fontWeight:900}}>
-                                Support
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                FAQs
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                Support Center
-                            </Typography>
-                            <Typography variant='h6' style={{fontSize:'14px'}}>
-                                Contact Us
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </Grid>
+                            </FooterLink>
+                    </Box>
+                    <Box>
+                        <Typography
+                            sx={{
+                                fontSize: "20px",
+                                color: "#fff",
+                                fontWeight: "700",
+                                mb: 2,
+                            }}
+                        >
+                            Company
+                        </Typography>
+
+                        <FooterLink>
+                            Why Food
+                        </FooterLink>
+                        <FooterLink>
+                            Capital
+                        </FooterLink>
+                        <FooterLink>
+                            Security
+                        </FooterLink>
+                    </Box>
+                    <Box>
+                        <Typography
+                            sx={{
+                                fontSize: "20px",
+                                color: "#fff",
+                                fontWeight: "700",
+                                mb: 2,
+                            }}
+                        >
+                            Support
+                        </Typography>
+                        <FooterLink>
+                            FAQs
+                        </FooterLink>
+                        <FooterLink>
+                            Support Center
+                        </FooterLink>
+                        <FooterLink>
+                            Contact Us
+                        </FooterLink>
+                    </Box>
+                </CustomContainer>
+            </CustomContainer>
         </Box>
     )
 }

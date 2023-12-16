@@ -7,22 +7,24 @@ import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
 import LocalPoliceIcon from '@mui/icons-material/LocalPolice';
 import StarsIcon from '@mui/icons-material/Stars';
 import Paper from '@mui/material/Paper';
+import eatImg from '../media/eat.avif';
+import Container from '@mui/material/Container';
 
 function HelpCenter(){
     return (
-        <Box sx={{marginTop: '30px'}}>
-            <Grid container spacing={2}>
+        <Container sx={{marginTop: '30px'}}>
+            <Grid container alignItems="center" justifyContent="center" spacing={2}>
                 <Grid item xs={12} md={6}>
                     <Box sx={{ height: '480px', width: '100%', overflow: 'hidden' }}>
                         <img
-                            src='eat.avif'  // Replace with the correct path to your image
+                            src={ eatImg }
                             alt='eating food'
                             style={{ objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%' }}
                         />
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Box marginBottom='20px'>
+                    <Box marginBottom='20px' sx={{ width: { xs: '100%'} }}>
                         <Typography variant='h5' sx={{textTransform: 'capitalize', display: 'flex', justifyContent:'start', alignItems:'center', fontWeight: '700'}}>
                             <DiamondIcon style={{fontSize:'46px', marginRight:'10px'}}/>
                             <span style={{fontSize:'35px'}}>Our value to help you.</span>
@@ -32,8 +34,8 @@ function HelpCenter(){
                         </Typography>
                     </Box>
                     <Box>
-                        <Grid container spacing={2}>
-                            <Grid item md={6}>
+                        <Grid container alignItems="center" justifyContent="center" spacing={2}>
+                            <Grid item md={6} sx={{width: '600px'}}>
                                 <Paper elevation={2}>
                                     <Box sx={{padding:'10px 16px', borderRadius:'15px'}}>
                                         <FavoriteIcon style={{fontSize:'46px'}}/>
@@ -46,7 +48,7 @@ function HelpCenter(){
                                     </Box>
                                 </Paper>
                             </Grid>
-                            <Grid item md={6}>
+                            <Grid item md={6} sx={{width: '600px'}}>
                                 <Paper elevation={2}>
                                     <Box sx={{padding:'10px 16px', borderRadius:'15px'}}>
                                         <EnergySavingsLeafIcon style={{fontSize:'46px'}}/>
@@ -59,7 +61,7 @@ function HelpCenter(){
                                     </Box>
                                 </Paper>
                             </Grid>
-                            <Grid item md={6}>
+                            <Grid item md={6} sx={{width: '600px'}}>
                                 <Paper elevation={2}>
                                     <Box sx={{padding:'10px 16px', borderRadius:'15px'}}>
                                         <LocalPoliceIcon style={{fontSize:'46px'}}/>
@@ -72,7 +74,7 @@ function HelpCenter(){
                                     </Box>
                                 </Paper>
                             </Grid>
-                            <Grid item md={6}>
+                            <Grid item md={6} sx={{width: '600px'}}>
                                 <Paper elevation={2}>
                                     <Box sx={{padding:'10px 16px', borderRadius:'15px'}}>
                                         <StarsIcon style={{fontSize:'46px'}}/>
@@ -89,7 +91,7 @@ function HelpCenter(){
                     </Box>
                 </Grid>
             </Grid>
-        </Box>
+        </Container>
     )
 }
 export default HelpCenter;

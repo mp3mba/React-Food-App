@@ -1,7 +1,8 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import styled from '@mui/styled-engine';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -19,7 +20,7 @@ import './Navbar.css';
 const drawerWidth = 240;
 const navItems = ['Programs', 'Services', 'News', 'About Us'];
 
-function DrawerAppBar(props) {
+function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -47,12 +48,29 @@ function DrawerAppBar(props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
+  const CustomButton = styled(Button)(({ theme }) => ({
+    backgroundColor: 'yellow',
+    color: 'black',
+    fontWeight: "700",
+    fontSize: "14px",
+    cursor: "pointer",
+    padding: "0.5rem 1.25rem",
+    borderRadius: "7px",
+    textTransform: "capitalize",
+    display: "block",
+    border: "2px solid transparent",
+    "&:hover": {
+      backgroundColor: 'yellow',
+      color: 'black',
+    },
+  }));
+
   return (
     <Box sx={{ display: 'flex', justifyContent: 'space-between'}}>
       <CssBaseline />
       <AppBar 
         component="nav" 
-        sx={{backgroundColor: 'rgba(0, 0, 0, 0.8)', boxShadow: 'none', display: 'flex', justifyContent: 'space-between'}} 
+        sx={{backgroundColor: 'rgba(0, 0, 0, 0)', boxShadow: 'none', display: 'flex', justifyContent: 'space-between', position: 'static'}} 
         id='navbar'
       >
         <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
@@ -80,7 +98,7 @@ function DrawerAppBar(props) {
             ))}
           </Box>
           <Box>
-            <Button variant="contained" sx={{backgroundColor: 'yellow', color:'black'}}>let's talk</Button>
+            <CustomButton>let's talk</CustomButton>
           </Box>
         </Toolbar>
       </AppBar>
@@ -105,12 +123,4 @@ function DrawerAppBar(props) {
   );
 }
 
-DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
-
-export default DrawerAppBar;
+export default Navbar;

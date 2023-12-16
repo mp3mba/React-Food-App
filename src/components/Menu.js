@@ -7,11 +7,14 @@ import SpaIcon from '@mui/icons-material/Spa';
 import HolidayVillageIcon from '@mui/icons-material/HolidayVillage';
 import LockIcon from '@mui/icons-material/Lock';
 import Button from '@mui/material/Button';
+import plate1 from '../media/plate1.jpg';
+import plate2 from '../media/plate2.jpg';
+import Container from '@mui/material/Container';
 
 function Menu(){
     return (
-        <Box style={{marginTop:'40px'}}>
-            <Box sx={{width: '50%'}}>
+        <Container style={{marginTop:'40px'}}>
+            <Box sx={{width: '100%'}}>
                 <Typography variant='h4' sx={{display:'flex', alignItems:'center'}}>
                     <SummarizeIcon style={{fontSize:'43px', color: '#15038a'}}/>
                     <span style={{fontSize:'28px', fontWeight:'800', textTransform:'capitalize'}}>Try our health menu.</span>
@@ -21,27 +24,27 @@ function Menu(){
                 </Typography>
             </Box>
             <Box>
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
-                    <Box style={{borderRadius: '10px', padding: '10px', width: '70%', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px'}}>
+            <Grid container alignItems="center" justifyContent="center" spacing={2}>
+                <Grid item xs={12} md={6} sx={{display: 'flex', justifyContent: 'center', flexDirection:'column', alignItems: 'center'}}>
+                    <Box style={{borderRadius: '10px', padding: '10px', width: '400px', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px', }}>
                         <Typography sx={{display:'flex', alignItems:'center'}}>
                             <AccessTimeIcon style={{fontSize: '35px', marginRight:'10px', color: '#15038a'}} />
                             <span style={{fontWeight: 800}}>Breakfast Recipes.</span>
                         </Typography>
                     </Box>
-                    <Box style={{borderRadius: '10px', padding: '10px', width: '70%', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px'}}>
+                    <Box style={{borderRadius: '10px', padding: '10px', width: '400px', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px', }}>
                         <Typography sx={{display:'flex', alignItems:'center'}}>
                             <SpaIcon style={{fontSize: '35px', marginRight:'10px', color: '#15038a'}} />
                             <span style={{fontWeight: 800}}>Low Carolie Recipes.</span>
                         </Typography>
                     </Box>
-                    <Box style={{borderRadius: '10px', padding: '10px', width: '70%', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px'}}>
+                    <Box style={{borderRadius: '10px', padding: '10px', width: '400px', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px', }}>
                         <Typography sx={{display:'flex', alignItems:'center'}}>
                             <HolidayVillageIcon style={{fontSize: '35px', marginRight:'10px', color: '#15038a'}} />
                             <span style={{fontWeight: 800}}>Holiday Recipes.</span>
                         </Typography>
                     </Box>
-                    <Box style={{borderRadius: '10px', padding: '10px', width: '70%', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px'}}>
+                    <Box style={{borderRadius: '10px', padding: '10px', width: '400px', boxShadow: '0px 0px 10px rgba(0,0,0,.4)', margin:'15px 0px', }}>
                         <Typography sx={{display:'flex', alignItems:'center'}}>
                             <LockIcon style={{fontSize: '35px', marginRight:'10px', color: '#15038a'}} />
                             <span style={{fontWeight: 800}}>Restriction Recipes.</span>
@@ -53,13 +56,13 @@ function Menu(){
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={6}>
                                 <Box 
-                                    style={{display: 'flex', flexDirection:'column', alignItems:'center', borderTopLeftRadius: '50%', borderTopRightRadius: '50%', boxShadow: '0px 0px 10px rgba(0,0,0,.7)', paddingBottom: '30px'}}
+                                    style={{display: 'flex', flexDirection:'column', alignItems:'center', boxShadow: '0px 0px 10px rgba(0,0,0,.7)', paddingBottom: '30px', minHeight: '190px', paddingTop:'10px'}}
                                 >
                                     <Box 
                                         style={{borderTopLeftRadius: '50%', borderTopRightRadius: '50%', boxShadow: '0px 0px 10px rgba(0,0,0,.3)'}}
                                     >
                                         <img 
-                                            src='./plate2.jpg' 
+                                            src={plate2} 
                                             alt='plate' 
                                             style={{borderTopLeftRadius: '50%', borderTopRightRadius: '50%'}}
                                         >
@@ -81,13 +84,13 @@ function Menu(){
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <Box
-                                    style={{display: 'flex', flexDirection:'column', alignItems:'center', borderTopLeftRadius: '50%', borderTopRightRadius: '50%', boxShadow: '0px 0px 10px rgba(0,0,0,.7)', paddingBottom: '40px'}}
+                                    style={{display: 'flex', flexDirection:'column', alignItems:'center', boxShadow: '0px 0px 10px rgba(0,0,0,.7)', paddingBottom: '40px', minHeight: '190px', paddingTop:'10px'}}
                                 >
                                     <Box
                                         style={{borderTopLeftRadius: '50%', borderTopRightRadius: '50%', boxShadow: '0px 0px 10px rgba(0,0,0,.3)'}}
                                     >
                                         <img 
-                                            src='./plate1.jpg' 
+                                            src={plate1} 
                                             alt='plate'
                                             style={{borderTopLeftRadius: '50%', borderTopRightRadius: '50%'}}
                                             >
@@ -112,7 +115,7 @@ function Menu(){
                 </Grid>
             </Grid>
             </Box>
-        </Box>
+        </Container>
     )
 }
 export default Menu;
