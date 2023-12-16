@@ -9,7 +9,7 @@ function Cta(){
         <Container>
             <Box 
                 style={{
-                    marginTop: '70px', display:'flex', flexDirection:'column', alignItems:'center', padding:'20px 0px', borderRadius:'20px', backgroundColor:'#15038a'}}
+                    marginTop: '70px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent: 'center', padding:'20px 0px', borderRadius:'20px', backgroundColor:'#15038a'}}
             >
                 <FlagCircleIcon 
                     sx={{fontSize: '60px', color:'white', margin:'17px 0px'}}
