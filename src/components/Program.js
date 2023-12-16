@@ -16,7 +16,10 @@ function Program() {
                 </Typography>
             </Box>
             
-            <Box>
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
                 <Grid container alignItems='center' justifyContent="center" spacing={2} sx={{borderRadius: '15px', padding: '30px 0px', backgroundColor: '#15038a'}}>
                     <Grid item xs={12} md={3}>
                         <Box sx={{display: 'flex', justifyContent: 'center', flexDirection: 'column', color:'white'}}>
