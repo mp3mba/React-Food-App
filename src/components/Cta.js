@@ -16,7 +16,7 @@ function Cta(){
                 />
                 <Typography 
                     variant='h5'
-                    style={{fontWeight:900, fontSize:'35px', textTransform:'capitalize', color:'white'}}
+                    style={{fontWeight:900, fontSize:'35px', textTransform:'capitalize', color:'white', textAlign: 'center'}}
                 >
                     get started with <span style={{color:'yellow'}}>eatly</span>.
                 </Typography>
